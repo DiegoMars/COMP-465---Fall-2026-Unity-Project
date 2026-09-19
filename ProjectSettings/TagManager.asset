@@ -12,11 +12,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Clickable
+  - Unit
+  - Structure
+  - Fog
   - 
   - 
   - 

@@ -20,13 +20,21 @@ public class UIManager : MonoBehaviour
     // }
 
     // Delegate here basically means something else will delegate it
-    public delegate void ChangeGeometry(Button button);
+    public delegate void ChangeGeometry(int index);
     public static event ChangeGeometry OnChangeGeometry;
 
-    public void OnButtonClicked(Button button)
-    {
-        Debug.Log($"You selected {button.name}");
+    public delegate void ChangeColor(int index);
+    public static event ChangeColor OnChangeColor;
 
-        OnChangeGeometry?.Invoke(button);
+    public void OnShapeSelection(int index)
+    {
+        Debug.Log($"You selected {index}");
+
+        OnChangeGeometry?.Invoke(index);
+    }
+
+    public void OnColorselection(int index)
+    {
+        OnChangeColor?.Invoke(index);
     }
 }
